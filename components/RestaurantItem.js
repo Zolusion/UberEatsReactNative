@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, Image, } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 export default function RestaurantItem() {
     return (
@@ -9,10 +10,26 @@ export default function RestaurantItem() {
     );
 }
 
-const RestaurantItem = () => (
-    <Image source={{
-        uri: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    }}
-    style={{width: "100%", height: 180}}
-    />
+const RestaurantImage = () => (
+    <>
+        <Image source={{
+            uri: "https://westcordhotels.nl/wp-content/uploads/sites/10/2019/06/westcord-wtc-hotel-restaurant-eleve-tafels.jpg"
+        }}
+            style={{
+                width: "100%",
+                height: 180
+            }}
+        />
+        <TouchableOpacity
+            style={{
+                position: "absolute",
+                right: 20,
+                top: 20
+            }}>
+            <MaterialCommunityIcons
+                name='heart-outline'
+                size={25}
+                color='#ffffff' />
+        </TouchableOpacity>
+    </>
 );
