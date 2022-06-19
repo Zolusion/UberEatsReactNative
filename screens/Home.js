@@ -3,6 +3,7 @@ import { View, Text, SafeAreaView } from "react-native";
 import { ScrollView } from "react-native-web";
 import Categories from "../components/Categories";
 import HeaderTabs from "../components/HeaderTabs";
+import RestaurantItem from "../components/RestaurantItem";
 import SearchBar from "../components/SearchBar";
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
                 <SearchBar />
             </View>
             <ScrollView showsVerticalScrollIndicator={false} />  {/* scrolling by touching the screen so everything moves */}
-                <Categories />
+                <RestaurantItem />
             <ScrollView />
         </SafeAreaView>
     );
