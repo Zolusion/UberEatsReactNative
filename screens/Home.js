@@ -12,7 +12,7 @@ export default function Home() {
                 <HeaderTabs />
                 <SearchBar />
             </View>
-            <ScrollView showsVerticalScrollIndicator={false} />
+            <ScrollView showsVerticalScrollIndicator={false} />  {/* scrolling by touching the screen so everything moves */}
                 <Categories />
             <ScrollView />
         </SafeAreaView>
