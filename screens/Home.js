@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import Categories from "../components/Categories";
 import HeaderTabs from "../components/HeaderTabs";
+import RestaurantItem from "../components/RestaurantItem";
 import SearchBar from "../components/SearchBar";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
             </View>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <Categories />
+                <RestaurantItem />
             </ScrollView>
         </SafeAreaView>
     );
