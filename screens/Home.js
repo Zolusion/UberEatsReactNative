@@ -27,7 +27,7 @@ export default function Home() {
 
     useEffect(() => {
         getRestaurantsFromYelp();
-    }, [])
+    }, [city])
 
     return (
         <SafeAreaView style={{
@@ -39,11 +39,11 @@ export default function Home() {
                 padding: 15
             }}>
                 <HeaderTabs />
-                <SearchBar />
+                <SearchBar cityHandler={setCity} />
             </View>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <Categories />
-                <RestaurantItems restaurantData={restaurantData} cityHandler={setCity} />
+                <RestaurantItems restaurantData={restaurantData} />
             </ScrollView>
         </SafeAreaView>
     );
