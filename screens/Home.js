@@ -9,9 +9,10 @@ const YELP_API_KEY = "OnuYS3nbICH8joQ9spRUbzO3NBYsbapyMzzXqhqqH4UqX4ING4_zfcVkTs
 
 export default function Home() {
     const [restaurantData, setRestaurantData] = React.useState(localRestaurants);
+    const [city, setCity] = useState("San Francisco");
 
     const getRestaurantsFromYelp = () => {
-        const yelpUrl = "https://api.yelp.com/v3/businesses/search?term=restaurants&location=Rotterdam";
+        const yelpUrl = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=${city}`;
 
         const apiOptions = {
             headers: {
@@ -42,7 +43,7 @@ export default function Home() {
             </View>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <Categories />
-                <RestaurantItems restaurantData={restaurantData} />
+                <RestaurantItems restaurantData={restaurantData} cityHandler={setCity} />
             </ScrollView>
         </SafeAreaView>
     );
