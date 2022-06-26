@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+
 
 export default function BottomTabs(props) {
     return (
@@ -22,15 +23,17 @@ export default function BottomTabs(props) {
 }
 
 const Icon = (props) => (
-    <View>
-        <FontAwesome5
-            name={props.icon}
-            size={35}
-            style={{
-                marginBottom: 3,
-                alignSelf: "center",
-            }}
-        />
-        <Text>{props.text}</Text>
-    </View>
+    <TouchableOpacity>
+        <View>
+            <FontAwesome5
+                name={props.icon}
+                size={35}
+                style={{
+                    marginBottom: 3,
+                    alignSelf: "center",
+                }}
+            />
+            <Text>{props.text}</Text>
+        </View>
+    </TouchableOpacity>
 )
