@@ -1,12 +1,13 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const image = "https://images.unsplash.com/photo-1599458448510-59aecaea4752?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
 
 const title = 'Farmhouse Kitchen Thai Cuisine';
-const description = 'Thai - Comfort Food - $$ - :ticket - 4:stars (2913+)';
+const description = 'Thai • Comfort Food ';
+
+
 
 export default function About() {
     return (
@@ -24,7 +25,7 @@ const RestaurantImage = (props) => (
 
 const RestaurantTitle = (props) => (
     <Text style={{
-        fontSize: 24,
+        fontSize: 29,
         fontWeight: "600",
         marginTop: 10,
         marginHorizontal: 15,
@@ -35,5 +36,14 @@ const RestaurantTitle = (props) => (
 );
 
 const RestaurantDescription = (props) => (
-    <Text>{props.description}</Text>
+    <Text style={{
+        marginTop: 10,
+        marginHorizontal: 15,
+        fontWeight: "400",
+        fontSize: 15.5,
+    }}
+    >
+        {props.description}
+    </Text>
 )
+
