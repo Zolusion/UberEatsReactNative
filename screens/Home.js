@@ -9,7 +9,7 @@ import SearchBar from "../components/home/SearchBar";
 
 const YELP_API_KEY = "OnuYS3nbICH8joQ9spRUbzO3NBYsbapyMzzXqhqqH4UqX4ING4_zfcVkTs7p5x46OYRGUwdZ8Wdg0Auqm4LeYNalMlHFIAobLz8djZyfmV3Bo71cJzt_RdH7y5uwYnYx";
 
-export default function Home() {
+export default function Home({ navigation }) {
     const [restaurantData, setRestaurantData] = React.useState(localRestaurants);
     const [city, setCity] = useState("San Francisco");
     const [activeTab, setActiveTab] = useState("Delivery")
@@ -48,12 +48,12 @@ export default function Home() {
                 backgroundColor: "white",
                 padding: 15
             }}>
-                <HeaderTabs activeTab={activeTab} setActiveTab={setActiveTab}/>
+                <HeaderTabs activeTab={activeTab} setActiveTab={setActiveTab} />
                 <SearchBar cityHandler={setCity} />
             </View>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <Categories />
-                <RestaurantItems restaurantData={restaurantData} />
+                <RestaurantItems restaurantData={restaurantData} navigation={navigation} />
             </ScrollView>
             <Divider width={1} />
             <BottomTabs />
