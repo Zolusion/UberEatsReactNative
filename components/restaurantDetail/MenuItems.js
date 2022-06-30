@@ -5,22 +5,40 @@ import { Divider } from "react-native-elements/dist/divider/Divider";
 
 const foods = [
     {
-        title: "Lasagna",
-        description: "With butter lettuce, tomato and sauce bechamel",
-        price: "€14.95",
-        image: "https://images.unsplash.com/photo-1621510456681-2330135e5871?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        title: "Ebi Katsu",
+        description: "Gefrituurde gepaneerde grote garnalen. Geserveerd met een pittige chili knoflooksaus, chili, koriander en verse limoen",
+        price: "€7.50",
+        image: "https://res.cloudinary.com/tkwy-prod-eu/image/upload/ar_1:1,c_thumb,h_340,w_340/f_auto/q_auto/dpr_1.0/v1656410446/static-takeaway-com/images/chains/nl/wagamama/products/sides_ebikatsuwhite"
     },
     {
-        title: "Tandoori Chicken",
-        description: "Amazing Indian dish with tenderlion chicken off the sizzle",
+        title: "Kip Gyoza",
+        description: "Gegrilde kip gyoza's geserveerd met dipsaus",
         price: "€19.95",
-        image: "https://images.unsplash.com/photo-1567121938596-6d9d015d348b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        image: "https://res.cloudinary.com/tkwy-prod-eu/image/upload/ar_1:1,c_thumb,h_340,w_340/f_auto/q_auto/dpr_1.0/v1656410446/static-takeaway-com/images/chains/nl/wagamama/products/sides_steamedchickengyoza"
     },
     {
-        title: "Chilaquiles",
-        description: "Chilaquiles with cheese and sauce. A delicious mexican dish",
+        title: "Grilled duck donburi",
+        description: "Malse ontbeende eend, pittige teriyaki saus, wortels, peultjes, zoete aardappel, rode ui, Japanse kleefrijst, gebakken ei, komkommer, lente-uitjes, kimchee",
         price: "€13.95",
-        image: "https://images.unsplash.com/photo-1599789197514-47270cd526b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        image: "https://res.cloudinary.com/tkwy-prod-eu/image/upload/ar_1:1,c_thumb,h_340,w_340/f_auto/q_auto/dpr_1.0/v1656410446/static-takeaway-com/images/chains/nl/wagamama/products/donburi_grilledduck"
+    },
+    {
+        title: "Katsu power voor 1",
+        description: "Ebi katsu, chicken katsu curry en 1 softdrink naar keuze",
+        price: "€13.95",
+        image: "https://res.cloudinary.com/tkwy-prod-eu/image/upload/ar_1:1,c_thumb,h_340,w_340/f_auto/q_auto/dpr_1.0/v1656410446/static-takeaway-com/images/chains/nl/wagamama/products/katsu_power_voor_1"
+    },
+    {
+        title: "Wagamama's klassiekers",
+        description: "Gyoza kip van yasai, pad thai garnalen en kip van yasai en 1 frisdrank naar keuze",
+        price: "€13.95",
+        image: "https://res.cloudinary.com/tkwy-prod-eu/image/upload/ar_1:1,c_thumb,h_340,w_340/f_auto/q_auto/dpr_1.0/v1656410446/static-takeaway-com/images/chains/nl/wagamama/products/wagamama_klassiekers"
+    },
+    {
+        title: "Chilli prawn and kimchee ramen",
+        description: "Gemarineerde garnalen met staart met taugé, bosui en kimchee. Geserveerd met verse limoen en koriander in een pittige groentebouillon",
+        price: "€13.95",
+        image: "https://res.cloudinary.com/tkwy-prod-eu/image/upload/ar_1:1,c_thumb,h_340,w_340/f_auto/q_auto/dpr_1.0/v1656410446/static-takeaway-com/images/chains/nl/wagamama/products/ramen_chilliprawnkimchee"
     },
 ];
 

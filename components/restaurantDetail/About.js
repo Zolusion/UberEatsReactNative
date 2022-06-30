@@ -1,12 +1,24 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
+const yelpRestaurantInfo = {
+    name: "Wagamama",
+    image: "https://gymjunkies.nl/wp-content/uploads/2018/04/wagamama-utrecht-hotspot.jpg",
+    reviews: '1500',
+    categories: [
+        { title: "Indian" }, 
+        { title: "Comford Food" },
+        { title: "Drinks" },
+        { title: "Snacks" },
+    ],
+};
 
-const image = "https://images.unsplash.com/photo-1599458448510-59aecaea4752?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
+const { name, image, price, categories } = yelpRestaurantInfo;
 
-const title = 'Farmhouse Kitchen Thai Cuisine';
-const description = 'Thai • Comfort Food ';
+const formattedCategories = categories.map((cat) => cat.title).join(" • ");
+
+const description = `${formattedCategories} ${price ? " • " + price : ""}`;
+
 
 
 
@@ -14,7 +26,7 @@ export default function About() {
     return (
         <View>
             <RestaurantImage image={image} />
-            <RestaurantTitle title={title} />
+            <RestaurantName name={name} />
             <RestaurantDescription description={description} />
         </View>
     );
@@ -24,7 +36,7 @@ const RestaurantImage = (props) => (
     <Image source={{ uri: props.image }} style={{ width: "100%", height: 180 }} />
 );
 
-const RestaurantTitle = (props) => (
+const RestaurantName = (props) => (
     <Text style={{
         fontSize: 29,
         fontWeight: "600",
