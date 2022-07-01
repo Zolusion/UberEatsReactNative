@@ -6,23 +6,19 @@ const yelpRestaurantInfo = {
     image: "https://gymjunkies.nl/wp-content/uploads/2018/04/wagamama-utrecht-hotspot.jpg",
     reviews: '1500',
     categories: [
-        { title: "Indian" }, 
+        { title: "Indian" },
         { title: "Comford Food" },
         { title: "Drinks" },
         { title: "Snacks" },
     ],
 };
 
-const { name, image, price, categories } = yelpRestaurantInfo;
+export default function About(props) {
 
-const formattedCategories = categories.map((cat) => cat.title).join(" • ");
+    const { name, image, price, categories } = props.route.params;
+    const formattedCategories = categories.map((cat) => cat.title).join(" • ");
+    const description = `${formattedCategories} ${price ? " • " + price : ""}`;
 
-const description = `${formattedCategories} ${price ? " • " + price : ""}`;
-
-
-
-
-export default function About() {
     return (
         <View>
             <RestaurantImage image={image} />
